@@ -25,7 +25,6 @@ const softSkills = [
 export default function Habilidades() {
     const [page, setPage] = useState(0);
     const [transition, setTransition] = useState(false);
-    const lastScroll = useRef(Date.now());
 
     // Drag state
     const dragStartX = useRef<number | null>(null);
@@ -42,7 +41,7 @@ export default function Habilidades() {
         setTimeout(() => {
             setPage(idx);
             setTransition(false);
-        }, 300);
+        }, 200);
     };
 
     // Drag handlers
@@ -76,12 +75,12 @@ export default function Habilidades() {
                 onMouseUp={handleMouseUp}
                 onMouseLeave={handleMouseLeave}
                 tabIndex={0}
-                style={{ outline: 'none', cursor: 'grab' }}
+                
             >
                 <h1 className="font-dm-sans font-light text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white pb-6 text-center ">
                     {pages[page].title}
                 </h1>
-                <div
+                <div style={{ outline: 'none', cursor: 'grab' }}
                     className={`flex gap-6 flex-wrap justify-center mb-8 transition-all duration-300 ease-in-out
                         ${transition ? 'opacity-0 translate-x-10 pointer-events-none' : 'opacity-100 translate-x-0'}
                     `}

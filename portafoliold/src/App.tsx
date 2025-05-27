@@ -7,17 +7,19 @@ import SobreMi from './components/SobreMi'
 import Proyectos from './components/Proyectos'
 import Habilidades from './components/Habilidades'
 import Contacto from './components/Contacto'
+import ToTop from './components/ToTop'
 function App() {
 
   return (
     <>
       <Navbar />
-      <Inicio />
-      <SobreMi />
-      <Proyectos />
-      <Habilidades />
-      <Contacto />
+      <section id="inicio"><Inicio /></section>
+      <section id="sobremi"><SobreMi /></section>
+      <section id="proyectos"><Proyectos /></section>
+      <section id="habilidades"><Habilidades /></section>
+      <section id="contacto"><Contacto /></section>
       <Footer />
+      <ToTop />
     </>
   )
 }

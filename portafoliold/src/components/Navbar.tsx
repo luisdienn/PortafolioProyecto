@@ -1,19 +1,41 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import { useEffect } from "react";
 
 const navigation = [
-    { name: 'Inicio', href: '#', current: true },
-    { name: 'Sobre Mí', href: '#', current: false },
-    { name: 'Proyectos', href: '#', current: false },
-    { name: 'Habilidades', href: '#', current: false },
-    { name: 'Contacto', href: '#', current: false },
+    { name: 'Inicio', href: '#inicio', current: false },
+    { name: 'Sobre Mí', href: '#sobremi', current: false },
+    { name: 'Proyectos', href: '#proyectos', current: false },
+    { name: 'Habilidades', href: '#habilidades', current: false },
+    { name: 'Contacto', href: '#contacto', current: false },
 ]
 
 function classNames(...classes: string[]) {
     return classes.filter(Boolean).join(' ')
 }
 
+function useSmoothScrollWithOffset(offset = 70) {
+  useEffect(() => {
+    const handleClick = (e: any) => {
+      const anchor = e.target.closest('a[href^="#"]');
+      if (anchor) {
+        const id = anchor.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if (el) {
+          e.preventDefault();
+          const y = el.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+      }
+    };
+    document.addEventListener('click', handleClick);
+    return () => document.removeEventListener('click', handleClick);
+  }, [offset]);
+}
+
 export default function Navbar() {
+    useSmoothScrollWithOffset(70);
+
     return (
         <Disclosure as="nav" className="fixed top-0 w-full z-50 bg-transparent backdrop-blur-sm">
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -34,7 +56,7 @@ export default function Navbar() {
                                         href={item.href}
                                         aria-current={item.current ? 'page' : undefined}
                                         className={classNames(
-                                            item.current ? 'font-dm-sans bg-gray-900 text-white' : 'font-dm-sans text-gray-300 hover:bg-gray-700 hover:text-white',
+                                            item.current ? 'font-dm-sans hover:bg-gray-700  text-white' : 'font-dm-sans text-gray-300 hover:bg-gray-700 hover:text-white',
                                             ' px-3 py-2 text-sm font-medium',
                                         )}
                                     >
@@ -68,7 +90,7 @@ export default function Navbar() {
                             href={item.href}
                             aria-current={item.current ? 'page' : undefined}
                             className={classNames(
-                                item.current ? 'font-dm-sans bg-gray-900 text-white' : 'font-dm-sans text-gray-300 hover:bg-gray-700 hover:text-white',
+                                item.current ? 'font-dm-sans hover:bg-gray-700 text-white' : 'font-dm-sans text-gray-300 hover:bg-gray-700 hover:text-white',
                                 'block px-3 py-2 text-base font-medium',
                             )}
                         >

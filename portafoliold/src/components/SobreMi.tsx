@@ -16,7 +16,7 @@ export default function SobreMi() {
                 <a
                     href={CVESPANOL}
                     download
-                    className="inline-flex px-6 py-3 bg-white border border-pink-700 text-pink-700 font-dm-sans group hover:bg-pink-700 hover:text-white transition-colors duration-300"
+                    className="inline-flex px-6 py-3 bg-white border-2 border-pink-700 text-pink-700 font-dm-sans group hover:bg-pink-700 hover:text-white transition-colors duration-300"
                 >
                     <svg className="w-5 h-5 mr-2 group-hover:translate-y-1 transition-transform duration-300" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m0 0l-6-6m6 6l6-6" />
