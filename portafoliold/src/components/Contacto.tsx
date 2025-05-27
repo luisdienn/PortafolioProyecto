@@ -46,13 +46,13 @@ export default function Contacto() {
                         className="space-y-4"
                         onSubmit={handleSubmit}
                     >
-                        <input name="nombre" type='text' placeholder='Nombre'
+                        <input name="nombre" type='text' placeholder='Nombre' required
                             className="w-full text-slate-900  py-2.5 px-4 border border-gray-300 text-sm font-dm-sans outline-0 focus:border-pink-500" />
-                        <input name="email" type='email' placeholder='Correo electrónico'
+                        <input name="email" type='email' placeholder='Correo electrónico' required
                             className="w-full text-slate-900  py-2.5 px-4 border border-gray-300 text-sm font-dm-sans outline-0 focus:border-pink-500" />
-                        <input name="asunto" type='text' placeholder='Asunto'
+                        <input name="asunto" type='text' placeholder='Asunto' required
                             className="w-full text-slate-900  py-2.5 px-4 border border-gray-300 text-sm font-dm-sans outline-0 focus:border-pink-500" />
-                        <textarea name="mensaje" placeholder='Mensaje' rows={6}
+                        <textarea name="mensaje" placeholder='Mensaje' rows={6} required
                             className="w-full text-slate-900  px-4 border border-gray-300 text-sm font-dm-sans pt-2.5 outline-0 focus:border-pink-500"></textarea>
                         <button type='submit'
                             className=" hover:bg-pink-700 hover:text-white border-2 border-pink-700  text-[15px] font-medium font-syne px-4 py-2 w-full cursor-pointer text-pink-700 !mt-6 transition-colors duration-300">ENVIAR</button>

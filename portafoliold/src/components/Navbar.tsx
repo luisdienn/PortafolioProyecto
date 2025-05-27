@@ -68,11 +68,13 @@ export default function Navbar() {
                                 ))}
 
                                 {/* Widget envuelto en contenedor Tailwind */}
-                                <div>
-                                    <div className=" pt-1 pl-2 ">
+                                {/* Widget común para ambas vistas */}
+                                <div className="block px-3 pt-2 sm:pt-1 sm:pl-2">
+                                    <div className="inline-block rounded bg-black hover:bg-gray-700 transition">
                                         <GoogleTranslateWidget />
                                     </div>
                                 </div>
+
                             </div>
 
 
@@ -103,17 +105,27 @@ export default function Navbar() {
                             href={item.href}
                             aria-current={item.current ? 'page' : undefined}
                             className={classNames(
-                                item.current ? 'font-dm-sans hover:bg-gray-700 text-white' : 'font-dm-sans text-gray-300 hover:bg-gray-700 hover:text-white',
+                                item.current
+                                    ? 'font-dm-sans hover:bg-gray-700 text-white'
+                                    : 'font-dm-sans text-gray-300 hover:bg-gray-700 hover:text-white',
                                 'block px-3 py-2 text-base font-medium',
                             )}
                         >
                             {item.name}
-
                         </DisclosureButton>
-
                     ))}
+
+                    {/* Widget para versión móvil */}
+                    {/* Widget común para ambas vistas */}
+                    <div className="block px-3 pt-2 sm:pt-1 sm:pl-2">
+                        <div className="inline-block rounded bg-black hover:bg-gray-700 transition">
+                            <GoogleTranslateWidget />
+                        </div>
+                    </div>
+
                 </div>
             </DisclosurePanel>
+
         </Disclosure>
     )
 }
