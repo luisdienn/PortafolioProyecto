@@ -4,6 +4,9 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Inicio from './components/Incio'
 import SobreMi from './components/SobreMi'
+import Proyectos from './components/Proyectos'
+import Habilidades from './components/Habilidades'
+import Contacto from './components/Contacto'
 function App() {
 
   return (
@@ -11,12 +14,9 @@ function App() {
       <Navbar />
       <Inicio />
       <SobreMi />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+      <Proyectos />
+      <Habilidades />
+      <Contacto />
       <Footer />
     </>
   )
