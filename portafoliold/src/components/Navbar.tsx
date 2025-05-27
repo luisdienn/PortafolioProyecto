@@ -1,6 +1,7 @@
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useEffect } from "react";
+import GoogleTranslateWidget from './GoogleTranslateWidget';
 
 const navigation = [
     { name: 'Inicio', href: '#inicio', current: false },
@@ -15,22 +16,22 @@ function classNames(...classes: string[]) {
 }
 
 function useSmoothScrollWithOffset(offset = 70) {
-  useEffect(() => {
-    const handleClick = (e: any) => {
-      const anchor = e.target.closest('a[href^="#"]');
-      if (anchor) {
-        const id = anchor.getAttribute('href').slice(1);
-        const el = document.getElementById(id);
-        if (el) {
-          e.preventDefault();
-          const y = el.getBoundingClientRect().top + window.scrollY - offset;
-          window.scrollTo({ top: y, behavior: 'smooth' });
-        }
-      }
-    };
-    document.addEventListener('click', handleClick);
-    return () => document.removeEventListener('click', handleClick);
-  }, [offset]);
+    useEffect(() => {
+        const handleClick = (e: any) => {
+            const anchor = e.target.closest('a[href^="#"]');
+            if (anchor) {
+                const id = anchor.getAttribute('href').slice(1);
+                const el = document.getElementById(id);
+                if (el) {
+                    e.preventDefault();
+                    const y = el.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({ top: y, behavior: 'smooth' });
+                }
+            }
+        };
+        document.addEventListener('click', handleClick);
+        return () => document.removeEventListener('click', handleClick);
+    }, [offset]);
 }
 
 export default function Navbar() {
@@ -49,21 +50,33 @@ export default function Navbar() {
                             />
                         </div>
                         <div className="hidden sm:ml-6 sm:block sm:flex-1 sm:flex sm:justify-end">
-                            <div className="flex space-x-4">
+                            <div className="flex items-center space-x-4">
                                 {navigation.map((item) => (
                                     <a
                                         key={item.name}
                                         href={item.href}
                                         aria-current={item.current ? 'page' : undefined}
                                         className={classNames(
-                                            item.current ? 'font-dm-sans hover:bg-gray-700  text-white' : 'font-dm-sans text-gray-300 hover:bg-gray-700 hover:text-white',
-                                            ' px-3 py-2 text-sm font-medium',
+                                            item.current
+                                                ? 'font-dm-sans hover:bg-gray-700 text-white'
+                                                : 'font-dm-sans text-gray-300 hover:bg-gray-700 hover:text-white',
+                                            'px-3 py-2 text-sm font-medium'
                                         )}
                                     >
                                         {item.name}
                                     </a>
                                 ))}
+
+                                {/* Widget envuelto en contenedor Tailwind */}
+                                <div>
+                                    <div className=" pt-1 pl-2 ">
+                                        <GoogleTranslateWidget />
+                                    </div>
+                                </div>
                             </div>
+
+
+
                         </div>
                     </div>
                     <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -95,7 +108,9 @@ export default function Navbar() {
                             )}
                         >
                             {item.name}
+
                         </DisclosureButton>
+
                     ))}
                 </div>
             </DisclosurePanel>

@@ -1,3 +1,20 @@
+import { useEffect } from "react";
+
+function removeGoogleTranslateCredit() {
+  const container = document.getElementById("google-translate-element");
+
+  if (container) {
+    Array.from(container.childNodes).forEach((node) => {
+      if (
+        node.nodeType === Node.TEXT_NODE &&
+        node.textContent?.includes("Con la tecnología de")
+      ) {
+        node.textContent = "";
+      }
+    });
+  }
+}
+
 
 import './App.css'
 import Navbar from './components/Navbar'
@@ -8,7 +25,14 @@ import Proyectos from './components/Proyectos'
 import Habilidades from './components/Habilidades'
 import Contacto from './components/Contacto'
 import ToTop from './components/ToTop'
+
+
 function App() {
+  useEffect(() => {
+    const interval = setInterval(removeGoogleTranslateCredit, 500);
+    return () => clearInterval(interval);
+  }, []);
+
 
   return (
     <>

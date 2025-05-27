@@ -6,3 +6,21 @@ body {
   background-color: #000;
 }
 
+
+
+
+#google_translate_element img {
+  display: none !important;
+}
+
+#google_translate_element .goog-te-gadget span{
+  background:rgb(0, 0, 0) !important; 
+  color: #fff !important;
+  padding: 0.5rem !important;
+  font-family: 'DM Sans' !important;
+
+}
+
+#google_translate_element:hover .goog-te-gadget span {
+  background: rgb(55, 65, 81) !important;
+}
