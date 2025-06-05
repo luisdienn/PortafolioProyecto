@@ -2,6 +2,7 @@ import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/react
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useEffect } from "react";
 import GoogleTranslateWidget from './GoogleTranslateWidget';
+import logo from '../assets/logoBlancoTransp.png';
 
 const navigation = [
     { name: 'Inicio', href: '#inicio', current: false },
@@ -42,11 +43,11 @@ export default function Navbar() {
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                 <div className="relative flex h-16 items-center justify-between">
                     <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                        <div className="flex shrink-0 items-center">
+                        <div className="flex shrink-0 items-center pt-1">
                             <img
                                 alt="Your Company"
-                                src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500"
-                                className="h-8 w-auto"
+                                src={logo}
+                                className="h-32 w-auto"
                             />
                         </div>
                         <div className="hidden sm:ml-6 sm:block sm:flex-1 sm:flex sm:justify-end">
@@ -58,8 +59,8 @@ export default function Navbar() {
                                         aria-current={item.current ? 'page' : undefined}
                                         className={classNames(
                                             item.current
-                                                ? 'font-dm-sans hover:bg-gray-700 text-white'
-                                                : 'font-dm-sans text-gray-300 hover:bg-gray-700 hover:text-white',
+                                                ? 'font-dm-sans hover:bg-pink-700 text-white'
+                                                : 'font-dm-sans text-gray-300 hover:bg-pink-700 hover:text-white',
                                             'px-3 py-2 text-sm font-medium'
                                         )}
                                     >
@@ -70,7 +71,7 @@ export default function Navbar() {
                                 {/* Widget envuelto en contenedor Tailwind */}
                                 {/* Widget común para ambas vistas */}
                                 <div className="block px-3 pt-2 sm:pt-1 sm:pl-2">
-                                    <div className="inline-block rounded bg-black hover:bg-gray-700 transition">
+                                    <div className="inline-block rounded bg-black hover:bg-pink-700 transition">
                                         <GoogleTranslateWidget />
                                     </div>
                                 </div>
@@ -83,7 +84,7 @@ export default function Navbar() {
                     </div>
                     <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                         {/* Mobile menu button*/}
-                        <DisclosureButton className="group relative inline-flex items-center justify-center p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset">
+                        <DisclosureButton className="group relative inline-flex items-center justify-center p-2 text-gray-400 hover:bg-pink-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset">
                             <span className="absolute -inset-0.5" />
                             <span className="sr-only">Open main menu</span>
                             <Bars3Icon aria-hidden="true" className="block size-6 group-data-open:hidden" />
@@ -106,8 +107,8 @@ export default function Navbar() {
                             aria-current={item.current ? 'page' : undefined}
                             className={classNames(
                                 item.current
-                                    ? 'font-dm-sans hover:bg-gray-700 text-white'
-                                    : 'font-dm-sans text-gray-300 hover:bg-gray-700 hover:text-white',
+                                    ? 'font-dm-sans hover:bg-pink-700 text-white'
+                                    : 'font-dm-sans text-gray-300 hover:bg-pink-700 hover:text-white',
                                 'block px-3 py-2 text-base font-medium',
                             )}
                         >
@@ -118,7 +119,7 @@ export default function Navbar() {
                     {/* Widget para versión móvil */}
                     {/* Widget común para ambas vistas */}
                     <div className="block px-3 pt-2 sm:pt-1 sm:pl-2">
-                        <div className="inline-block rounded bg-black hover:bg-gray-700 transition">
+                        <div className="inline-block rounded bg-black hover:bg-pink-700 transition">
                             <GoogleTranslateWidget />
                         </div>
                     </div>
