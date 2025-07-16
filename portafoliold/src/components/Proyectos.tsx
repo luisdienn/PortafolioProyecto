@@ -35,7 +35,7 @@ export default function Proyectos() {
               backgroundImage: `url(${RetoAppImage})`,
             }}
           >
-            <a href="https://github.com/luisdienn">
+            <a href="https://xvideos.com">
               <div className="relative z-10">
                 <h2 className="text-xl font-syne font-bold pb-4">RetoApp</h2>
                 <p className="font-sans">
