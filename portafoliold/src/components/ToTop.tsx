@@ -1,4 +1,5 @@
 import { ArrowUpIcon } from "@heroicons/react/16/solid";
+import { useEffect, useState } from "react";
 
 export function scrollToIdWithOffset(id: string, offset = 70) {
     const el = document.getElementById(id);
@@ -9,6 +10,24 @@ export function scrollToIdWithOffset(id: string, offset = 70) {
 }
 
 export default function ToTop() {
+    const [isVisible,setIsVisible] = useState(false);
+
+    useEffect(() =>{
+        const toggleVisibility = () =>{
+            if(window.scrollY>400){
+                setIsVisible(true)
+            }else{
+                setIsVisible(false)
+            }
+        };
+        window.addEventListener("scroll", toggleVisibility);
+        return() => window.removeEventListener("scroll", toggleVisibility);
+    },[])
+    
+    if(!isVisible){
+        return null;
+    }
+
     return (
         <div className="fixed bottom-5 right-5 z-50">
             <button

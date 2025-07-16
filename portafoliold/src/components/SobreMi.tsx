@@ -1,4 +1,4 @@
-import CVESPANOL from '../assets/CVESPANOL.pdf';
+import CVESPANOL from '../assets/CVMarcaEspañol.pdf';
 
 export default function SobreMi() {
     return (

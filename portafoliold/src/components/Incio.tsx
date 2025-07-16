@@ -1,18 +1,18 @@
-import cyberpunkVideo from '../assets/Cyberpunk.mp4';
+import cyberpunkVideo from "../assets/Cyberpunk.mp4";
 
 export default function Inicio() {
   return (
-    <div className="relative min-h-screen bg-black overflow-hidden flex items-center justify-center px-2 ">
+    <div className="relative min-h-screen bg-black overflow-hidden flex items-center justify-center px-2 "
+>
       {/* Video de fondo */}
-      <video
-        className="absolute top-0 left-0 w-full h-full object-cover z-0 opacity-60 "
-        src={cyberpunkVideo}
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
-
+        <video
+          className="absolute top-0 left-0 w-full h-full object-cover z-0 opacity-60 "
+          src={cyberpunkVideo}
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
 
       {/* Contenido central */}
       <div className="z-20 flex flex-col items-center w-full max-w-full">
