@@ -19,7 +19,7 @@ export default function Proyectos() {
           generen impacto.
         </p>
       </div>
-      <div className=" pt-2 h-screen  px-52">
+      <div className="pt-2 h-screen px-4 sm:px-8 md:px-16 lg:px-32 xl:px-52 max-w-screen-xl mx-auto">
         <ScrollStack>
           <ScrollStackItem
             itemClassName="    relative
