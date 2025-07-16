@@ -1,4 +1,3 @@
-import { FaLaptopCode } from "react-icons/fa";
 import ScrollStack, { ScrollStackItem } from "./ScrollStack";
 import RetoAppImage from "../assets/RetoApp.png";
 import CreativePort from "../assets/CreativePort.jpg";
