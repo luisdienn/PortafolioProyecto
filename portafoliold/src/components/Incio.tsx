@@ -1,4 +1,3 @@
-import cyberpunkVideo from "../assets/Cyberpunk.mp4";
 
 export default function Inicio() {
   return (
@@ -6,7 +5,7 @@ export default function Inicio() {
       {/* Video de fondo */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover z-0 opacity-60 "
-        src={cyberpunkVideo}
+        src="Cyberpunk.mp4"
         autoPlay
         loop
         muted
