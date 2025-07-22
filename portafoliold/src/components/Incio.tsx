@@ -5,7 +5,7 @@ export default function Inicio() {
       {/* Video de fondo */}
       <video
         className="absolute top-0 left-0 w-full h-full object-cover z-0 opacity-60 "
-        src="Cyberpunk.mp4"
+        src="CyberpunkConverted.mp4"
         autoPlay
         loop
         muted
