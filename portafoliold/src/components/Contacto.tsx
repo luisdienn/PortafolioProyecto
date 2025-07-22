@@ -1,7 +1,5 @@
 import { useState } from "react";
 
-//FALTA TODO
-
 export default function Contacto() {
     const [toast, setToast] = useState("");
 

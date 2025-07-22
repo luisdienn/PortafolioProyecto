@@ -45,12 +45,24 @@ export default function Proyectos() {
                   crear su propio “mundial personal” y comparar estadísticas con
                   amigos.
                 </p>
-                <br />
-                <br />
-                <p className="font-sans">
-                  Tecnologías: Ruby on Rails, React, PostgreSQL, Tailwind CSS,
-                  Git, Docker
-                </p>
+
+                <div className="flex flex-wrap gap-2 mt-8">
+                  {[
+                    "Ruby on Rails",
+                    "React",
+                    "PostgreSQL",
+                    "Tailwind CSS",
+                    "Git",
+                    "Docker",
+                  ].map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-4 py-1 text-sm border border-gray-500 rounded-full text-white hover:bg-white/10 transition"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
             </a>
           </ScrollStackItem>
@@ -81,11 +93,17 @@ export default function Proyectos() {
                   fotografía y videografía, combinando creatividad visual con
                   desarrollo web moderno.
                 </p>
-                <br />
-                <br />
-                <p className="font-sans">
-                  Tecnologías: React.js, Tailwind CSS, Cloudinary
-                </p>
+
+                <div className="flex flex-wrap gap-2 mt-8">
+                  {["React", "Cloudinary", "Tailwind CSS"].map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-4 py-1 text-sm border border-gray-500 rounded-full text-white hover:bg-white/10 transition"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
             </a>
           </ScrollStackItem>
@@ -117,12 +135,24 @@ export default function Proyectos() {
                   línea, notificaciones en tiempo real y análisis estadístico
                   con mapas de calor.
                 </p>
-                <br />
-                <br />
-                <p className="font-sans">
-                  Tecnologías: .NET Framework, React.js, Azure SQL, Tailwind
-                  CSS, Git, Python
-                </p>
+
+                <div className="flex flex-wrap gap-2 mt-8">
+                  {[
+                    ".Net",
+                    "React",
+                    "Tailwind CSS",
+                    "AzureSQL",
+                    "Python",
+                    "Git",
+                  ].map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-4 py-1 text-sm border border-gray-500 rounded-full text-white hover:bg-white/10 transition"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
             </a>
           </ScrollStackItem>
@@ -155,9 +185,16 @@ export default function Proyectos() {
                 </p>
                 <br />
                 <br />
-                <p className="font-sans">
-                  Tecnologías: .NET Framework, Azure SQL, Bootstrap, Git
-                </p>
+                <div className="flex flex-wrap gap-2 mt-8">
+                  {[".Net", "AzureSQL", "Bootstrap", "Git"].map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-4 py-1 text-sm border border-gray-500 rounded-full text-white hover:bg-white/10 transition"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
             </a>
           </ScrollStackItem>

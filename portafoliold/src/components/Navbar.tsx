@@ -50,7 +50,7 @@ export default function Navbar() {
                                 className="h-32 w-auto"
                             />
                         </div>
-                        <div className="hidden sm:ml-6 sm:block sm:flex-1 sm:flex sm:justify-end">
+                        <div className="hidden sm:ml-6 sm:flex-1 sm:flex sm:justify-end">
                             <div className="flex items-center space-x-4">
                                 {navigation.map((item) => (
                                     <a

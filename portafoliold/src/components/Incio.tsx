@@ -12,7 +12,7 @@ export default function Inicio() {
         muted
         playsInline
         preload="auto"
-        controls
+        
       />
 
       {/* Contenido central */}
